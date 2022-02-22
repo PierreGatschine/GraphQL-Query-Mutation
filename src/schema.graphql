@@ -1,0 +1,22 @@
+# Custom Types
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  age: Int
+}
+
+
+# Query
+
+type Query {
+    hello: String
+    users: [User!]!
+    user(id: ID!): User!
+}
+
+type Mutation {
+    createUser(id: ID!, name: String!, email: String!, age: Int): User!
+    deleteUser(id: ID!): Boolean!
+}
